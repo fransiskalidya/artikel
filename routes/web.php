@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/articles/cetak_pdf', function () {
+//     return view('articles.articles_pdf');
 // });
 Route::resource('articles', ArticleController::class);
+Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf']);
